@@ -1,9 +1,6 @@
-import React from "react";
-import { ContentBlockContentProps } from "../ContentBlocks.types";
+import React from 'react';
+import { ContentBlockContentProps } from '../ContentBlocks.types';
 
-/**
- * ContentBlocksContent Component
- */
 const ContentBlocksContent: React.FC<ContentBlockContentProps> = ({
   block,
 }) => {
@@ -14,10 +11,10 @@ const ContentBlocksContent: React.FC<ContentBlockContentProps> = ({
       <div className="Page__sectionInner ContentBlocks__inner grid">
         <div
           className={`Page__content grid__content${
-            fullWidth ? " grid__content--full" : ""
-          }${centerAlign ? " grid__content--center" : ""}`}
+            fullWidth ? ' grid__content--full' : ''
+          }${centerAlign ? ' grid__content--center' : ''}`}
         >
-          <div dangerouslySetInnerHTML={{ __html: content as TrustedHTML }} />
+          <div dangerouslySetInnerHTML={{ __html: content as string }} />
         </div>
       </div>
     </div>
