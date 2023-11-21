@@ -1,0 +1,35 @@
+.PagePortfolio {
+  &__sketch {
+    @media (--tablet-portrait) {
+      &::before {
+        background: url(./assets/img/sketch_portfolio_2x.png) 0 0 no-repeat;
+        background-size: 286px 564px;
+        content: "";
+        height: 513px;
+        pointer-events: none;
+        position: absolute;
+        right: 10px;
+        top: 56px;
+        width: 286px;
+        z-index: var(--z-index-PagePortfolio__sketch__before);
+      }
+
+      &::after {
+        background-image: url(./assets/img/sketch_portfolio_hand_2x.png);
+        background-size: 286px 170px;
+        content: "";
+        height: 170px;
+        pointer-events: none;
+        position: absolute;
+        right: 10px;
+        top: 56px;
+        width: 286px;
+        z-index: var(--z-index-PagePortfolio__sketch__after);
+      }
+    }
+  }
+
+  &__categoryWrap {
+    padding: 80px 0;
+  }
+}

@@ -1,0 +1,24 @@
+.PageContact {
+  .Page__sectionInner {
+    @media (--tablet-portrait) {
+      background: url(./assets/img/sketch_contact_behind_2x.jpg) 100% 86px
+        no-repeat;
+      background-size: 517px 1121px;
+    }
+  }
+
+  &__message {
+    &--success {
+      background: var(--color-alert-green);
+    }
+
+    &.form__messageInlineWrap {
+      margin: 0 0 15px 0;
+      max-width: 300px;
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+}
