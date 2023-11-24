@@ -47,6 +47,7 @@ const PostItem: React.FC<PostItemProps> = ({
           <LinkLoader key={postName} type={type} slug={postName}>
             <span className="PostItem__postLink link--withHeading link--withIcon">
               Read More
+              <span className="visuallyHidden"> about {postTitle}</span>
             </span>
           </LinkLoader>
         </section>

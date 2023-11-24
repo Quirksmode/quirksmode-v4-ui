@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 export async function getMetaData(fetchData: any): Promise<Metadata> {
   const pageData = await fetchData;
@@ -8,6 +8,7 @@ export async function getMetaData(fetchData: any): Promise<Metadata> {
   return {
     metadataBase,
     title: metadata.metaTitle,
+    description: metadata.metaDesc,
     openGraph: {
       title: metadata.metaTitle,
       description: metadata.metaDesc,
