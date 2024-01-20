@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![image](https://cms.quirksmode.co.uk/wp-content/uploads/2020/08/quirksmode-github.jpg)](https://www.quirksmode.co.uk)
 
-## Getting Started
+## Welcome
 
-First, run the development server:
+Hi and welcome to version 4 of my Personal Portfolio. Sadly I am unable to share many of the tools, projects and code that I develop for clients professionally, so I have decided to make my personal portfolio repository public.
+
+My reason for doing this is to hopefully inspire/help other developers who are seeking to create something similar.
+
+I am a huge fan of a side project as they help me to keep on top of new technologies, trends and tooling, which is why I wanted my Portfolio to be a little bit more involved than just a simple one pager. This is effectively my best practices sandbox, a place to test new tooling, libraries, frameworks etc. without restriction or fear of breaking something. Anyway, enough waffle from me, lets dive into some more detail.
+
+## About
+
+Quirksmode is a fully responsive Universal (SSR) React Application designed to connect to a Headless CMS (not included here). For V4 I wanted to experiment with NextJS and RSC (React Server Components), I must admit I have been really impressed and was able to convert the V3 codebase quickly and without too many issues. Whilst I took pride in effectively developing my own version of NextJS for V3, due to other projects taking up so much of my time I just wasn't able to maintain it so it made sense to switch to NextJS which has come such a long way over the last few years. I have also been able to say goodbye to Redux, which served it's purpose well for V3, but I definitely don't miss all the added complexity and boilerplate that came with it. Making server side API calls is definitely where RSC shines, in combination with React Server Actions for more complex client component use cases. When state did need to be shared between components I simply used Zustand, which kept things lean and simple.
+
+## Key Features
+
+- Universal React App (SSR with RSC/RSA)
+- Zustand for state management
+- Automated bundling and code splitting with lazy loaded components
+- Progressive Web App
+- Hot Reloading
+- Functional Components with Hooks for interactive client components
+- Follows BEM methodology
+- Pages and Components are grouped into namespaced folders/files
+
+## Requirements
+
+- [node](https://nodejs.org/en) == 18.12.1
+- [npm](https://www.npmjs.com) >= 9
+
+## Prerequisites
+
+- Clone the repo
+
+  ```sh
+  git clone https://github.com/Quirksmode/quirksmode-v4-ui.git
+  cd quirksmode-v3-ui
+  ```
+
+## How to run
+
+Run Development build (with Hot Reload)
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run Production build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run Linting
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open http://localhost:3000 with your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Update codebase/setup to replace NextJS defaults and with V3 defaults (e.g. linting, scripts)
+- Bring back Docker
+- Update Unit/Integration Tests to TS and improve coverage
+- Add E2E Tests
