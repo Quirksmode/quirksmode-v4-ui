@@ -34,7 +34,7 @@ Quirksmode is a fully responsive Universal (SSR) React Application designed to c
 
   ```sh
   git clone https://github.com/Quirksmode/quirksmode-v4-ui.git
-  cd quirksmode-v3-ui
+  cd quirksmode-v4-ui
   ```
 
 ## How to run
